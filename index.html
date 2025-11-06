@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Innovify XR | AR Restaurant Menu</title>
+  <meta name="description" content="Explore 3D food in AR — Pizza, Burger, Coffee. Created with Three.js & MindAR.">
+  <meta name="keywords" content="WebAR, Three.js, AR Menu, 3D Food, Innovify XR, Interactive Menu, Restaurant AR">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="./images/logoxr.png" alt="Innovify XR Company Logo">
+  <link rel="apple-touch-icon" href="./images/logoxr.png">
+
+  <meta property="og:title" content="Innovify XR | AR Restaurant Menu">
+<meta property="og:description" content="Explore 3D food in AR — pizza, burger, and coffee come to life with Innovify XR.">
+<meta property="og:image" content="/images/preview.jpg">
+<meta property="og:type" content="website">
+
+  <!-- main stylesheet -->
+  <script type="module" crossorigin src="./assets/menu-DHNJuw9a.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three.module-BNuljm8v.js">
+  <link rel="stylesheet" crossorigin href="./assets/three-C7ggxpAf.css">
+</head>
+
+<body>
+   <canvas id="bgCanvas"></canvas>
+<!-- ====================== HEADER ====================== -->
+<header class="header enhanced fadeSlideDown">
+  <div class="header-center">
+    <img src="./images/logoxr.png" alt="Innovify XR Logo" class="logo-full">
+    <p class="tagline">Interactive AR Restaurant Menu</p>
+  </div>
+</header>
+
+
+
+  <!-- ====================== MAIN CONTENT ====================== -->
+  <main class="menu-container">
+
+    <!-- HERO SECTION -->
+    <section class="hero fade-up">
+      <div class="hero-inner">
+        <h2 class="hero-title">Experience Food Like Never Before</h2>
+        <p class="subtitle">Tap “View in AR” to bring dishes to life. Works on supported devices with camera access.</p>
+      </div>
+    </section>
+
+    <!-- MENU GRID -->
+    <section class="menu-grid" id="menuGrid">
+
+      <!-- CARD 1 -->
+      <article class="menu-card reveal">
+        <div class="media">
+          <img src="./images/pizza.jpg" alt="Pizza" class="menu-img" loading="lazy" decoding="async">
+          <span class="badge">Chef’s Pick</span>
+        </div>
+        <div class="card-body">
+          <h3>Supreme Pizza</h3>
+          <p class="muted">Classic supreme pizza with golden crust and fresh toppings.</p>
+          <div class="card-row">
+            <a class="btn btn-ar" href="ar-view.html?item=pizza">View in AR</a>
+            <span class="price">Rs. 799</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="menu-card reveal">
+        <div class="media">
+          <img src="./images/burger.jpg" alt="Burger" class="menu-img" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>BigMacBurger</h3>
+          <p class="muted">Juicy grilled beef burger layered with cheese and fresh veggies.</p>
+          <div class="card-row">
+            <a class="btn btn-ar" href="ar-view.html?item=burger">View in AR</a>
+            <span class="price">Rs. 599</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="menu-card reveal">
+        <div class="media">
+          <img src="./images/coffee.jpg" alt="Coffee" class="menu-img" loading="lazy" decoding="async">
+        </div>
+        <div class="card-body">
+          <h3>Coffee</h3>
+          <p class="muted">Rich espresso topped with creamy foam and golden sprinkles.</p>
+          <div class="card-row">
+            <a class="btn btn-ar" href="ar-view.html?item=coffee">View in AR</a>
+            <span class="price">Rs. 299</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- NOTE -->
+    <p class="note fade-up">
+      💡 Tip: For the best AR experience, open on mobile Chrome or Safari and allow camera access.
+      Use printed markers from <code>/public/markers</code> if needed.
+    </p>
+
+  </main>
+
+    <!-- ====================== FOOTER ====================== -->
+  <footer class="footer fade-up">
+    <div class="footer-inner">
+  <p>© 2025 <strong>Innovify XR</strong> — Designed by Mahnoor. All rights reserved.</p>
+
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#">About</a> · 
+        <a href="#">Contact</a> · 
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+    
+  </footer>
+
+  <!-- ====================== SCRIPT ====================== -->
+
+  <script>
+  // Redirect back to scan page if not yet scanned
+  if (!localStorage.getItem("scanned")) {
+    window.location.href = "scan.html";
+  }
+</script>
+
+</body>
+</html>
+
